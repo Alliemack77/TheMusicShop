@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SCSS -->
     <link rel="stylesheet" href="/main.77bb5cfd.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400;700;800&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <script defer="" src="/solid.d6b243cb.js"></script>
     <script defer="" src="/brands.2d8f9876.js"></script>
     <script defer="" src="/fontawesome.bd9656ef.js"></script>
@@ -13,14 +20,22 @@
 <body>
 
     <header>
-        <div>
+        <!-- <div>
             <h2 class="logo">The Music Shop</h2>
             <p class="text-small">presents:</p>
-        </div>
+        </div> -->
 
         <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-list--item"><a class="nav-list--link" href="#">Sessions</a></li>
+                <li class="nav-list--item">
+                    <a class="nav-list--link" href="#">
+                        <div>
+                            <h2 class="logo">The Music Shop</h2>
+                            <!-- <p class="text-small">presents:</p> -->
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-list--item"><a class="nav-list--link" href="#">Schedule</a></li>
                 <li class="nav-list--item"><a class="nav-list--link" href="#">All Sessions</a></li>
             </ul>
         </nav>
@@ -35,19 +50,23 @@
 
     <main>
         <section class="hero">
-            <h1 class="title-cursive">Studio</h1>
-            <h1 class="title-uppercase">Sessions</h1>
+            <h1 class="title">Studio</h1>
+            <h1 class="title-secondary">Sessions</h1>
             <img class="hero-img" src="/hero.0f0b5fd4.jpg" alt="man singing into a microphone">
 
             <div class="subtitle-group">
-                <div class="subtitle">
-                    <p class="subtitle--cursive">Tobi James</p>
-                    <p class="subtitle--small">Country's rising music star</p>
+                <div>
+                    <p class="subtitle-cursive medium">Tobi James</p>
+                    <p class="subtitle-small">Country's rising star</p>
                 </div>
 
-                <div>
-                    <a class="btn-cta--lowercase" href="#"><i class="fas fa-play"></i>watch the session</a>
+                <div class="btn-group">
+                    <a class="btn-cta" href="#">
+                        <i class="fas fa-play"></i>
+                        <p>watch the session</p>
+                    </a>
                 </div>
+
             </div>
         </section>
 
@@ -55,29 +74,29 @@
         <section class="cta">
             <img class="cta-img" src="/guitar.8662e785.jpg" alt="man playing the guitar">
             <div class="cta-body">
-                <h2 class="subtitle-cursive">Join us for a session</h2>
+                <h2 class="subtitle-cursive small">Join us for a session</h2>
                 <p>Studio Sessions is an online performance hall in downtown Nashville. Mauris semper purus non mi tincidunt laoreet.</p>
-                <a class="btn-cta--uppercase" href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+                <a class="btn-cta uppercase" href="#">Learn more<i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
 
 
         <section class="quote">
-            <h2 class="subtitle-cursive">"Music allows us to be free"</h2>
+            <h2 class="subtitle-cursive large">"Music allows us to be free"</h2>
             <img class="quote-img" src="/womanAtPiano.464fe5e4.jpg" alt="woman playing the piano">
             <div class="cta-body">
                 <p class="subtitle-regular">River MacKenzie</p>
                 <p class="subtitle-small">Award winning songwriter/pianist</p>
                 <div>
-                    <a class="btn-cta--lowercase" href="#"><i class="fas fa-play"></i>watch the session</a>
+                    <a class="btn-cta" href="#"><i class="fas fa-play"></i>watch the session</a>
                 </div>
             </div>
         </section>
 
 
         <section class="sessions">
-            <h2 class="title-cursive">Studio</h2>
-            <h2 class="title-uppercase">Sessions</h2>
+            <h2 class="title">Studio</h2>
+            <h2 class="title-secondary">Sessions</h2>
             <p>Studio Sessions is an online performance hall in downtown Nashville. Mauris semper purus non mi tincidunt laoreet.</p>
 
             <div class="stack">
@@ -88,7 +107,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Ani DiFranco</h2>
                         <p class="card-subtitle">Prolific singer/songwriter</p>
-                        <a class="btn-cta--lowercase" href="#"><i class="fas fa-play"></i>watch the session</a>
+                        <a class="btn-cta" href="#"><i class="fas fa-play"></i>watch the session</a>
                     </div>
                 </div>
               
@@ -98,7 +117,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Andre Emory</h2>
                         <p class="card-subtitle">Nashville's newest songwriter</p>
-                        <a class="btn-cta--lowercase" href="#"><i class="fas fa-play"></i>watch the session</a>
+                        <a class="btn-cta" href="#"><i class="fas fa-play"></i>watch the session</a>
                     </div>
                 </div>
 
@@ -109,13 +128,13 @@
                     <div class="card-body">
                         <h2 class="card-title">Mica Fillmore</h2>
                         <p class="card-subtitle">CMA's Singer of the Year 2021</p>
-                        <a class="btn-cta--lowercase" href="#"><i class="fas fa-play"></i>watch the session</a>
+                        <a class="btn-cta" href="#"><i class="fas fa-play"></i>watch the session</a>
                     </div>
                 </div>
                 
             </div>
 
-            <a class="btn-cta--uppercase" href="#">See all sessions<i class="fas fa-chevron-right"></i></a>
+            <a class="btn-cta uppercase" href="#">See all sessions<i class="fas fa-chevron-right"></i></a>
 
         </section>
     </main>
@@ -130,8 +149,8 @@
             </div>
 
             <div class="footer__container">
-                <h2 class="title-cursive">Studio</h2>
-                <h2 class="title-uppercase">Sessions</h2>
+                <h2 class="title">Studio</h2>
+                <h2 class="title-secondary">Sessions</h2>
                 <p class="subtitle-accent">Thursdays @ 8pm</p>
                 <a class="subtitle-thin href=" #"="">themusicshop.com/studiosessions</a>
             </div>

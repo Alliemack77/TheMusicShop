@@ -1,0 +1,26 @@
+@import '../scss/variables.scss';
+
+
+@mixin accentText {
+    font-family: $font-accent;
+    font-weight: $thin;
+}
+
+@mixin smallText {
+    font-size: 0.875rem;
+    font-weight: $thin;
+}
+
+// uppercase text
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+// cta buttons
+@mixin ctaBtnOrange {
+    color: $orange;
+}
+
+
+// card body layout
+//card body style

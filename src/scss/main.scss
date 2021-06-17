@@ -1,6 +1,213 @@
 @import url("../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css");
+@import '../scss/base.scss';
+@import '../scss/mixins.scss';
+@import '../scss/variables.scss';
 
+
+// General Styling
 body {
-    background: #212620;
+    background: $forrest;
+    font-family: $font-main;
+    color: $creme;
 }
 
+.btn-cta {
+    @include ctaBtnOrange;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-weight: $bold;
+    transition-duration: 200ms;
+
+    &:hover {
+        color: #ff7c35;
+        transform: scale(2rem)
+    }
+
+    &.uppercase {
+        @include uppercase;
+    }
+
+}
+
+
+
+
+//// Typography
+.logo {
+    @include accentText;
+    width: min-content;
+    margin: 0;
+    font-size: $logo;
+}
+
+// .nav-list--item {
+//     font-size: clamp(1rem, 1.849vw, 2.125rem  ); //18px, 19.2px, 34
+
+//     //font-size: clamp(.75rem, 1.541vw, 1.5rem  ); //18px, 19.2px, 34
+// }
+
+// .text-small {
+//     @include smallText;
+// }
+
+.title {
+    @include accentText;
+    font-size: clamp(2.5rem, 4.5vw, 6rem); // ideal -->  2.875rem/46px/4.5vw
+    margin: 1.5em 0 0 0;
+    line-height: .55;
+
+}
+
+.title-secondary {
+    @include uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(5rem, 8.5vw, 10rem);
+    font-weight: $extra-bold;
+    text-transform: uppercase;
+}
+
+.subtitle-cursive {
+    @include accentText;
+}
+
+.subtitle-accent {
+    @include ctaBtnOrange;
+    font-weight: $bold;
+}
+
+.subtitle-thin {
+    @include ctaBtnOrange;
+    font-weight: $thin;
+}
+
+
+//// Cards
+.card-title {
+    @include accentText;
+}
+
+
+//// Header
+header {
+    //border: solid red 2px;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    
+    & .logo {
+        text-align: center;
+    }
+
+    & .nav-list, 
+    .social-links {
+        //border: solid yellow 2px;
+        display: flex;
+        justify-content: center;
+        gap: 2.75em;
+    }
+
+    .social-link {
+        font-size: 1.75rem;
+    }
+
+    & li:nth-child(1) {order: 2;}
+    & li:nth-child(2) {order: 1; align-self: center;}
+    & li:nth-child(3) {order: 3; align-self: center;}
+}
+
+
+
+
+//// Main
+main {
+    //border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2.5em 0 4em 0;
+    background: linear-gradient(90deg, rgba(33,38,32,1) 0%, rgba(33,38,32,1) 15%, rgba(31,36,30,1) 15%,
+    rgba(31,36,30,1) 20%, rgba(33,38,32,1) 20%, rgba(33,38,32,1) 22%, rgba(31,36,30,1) 22%,
+    rgba(31,36,30,1) 27%, rgba(33,38,32,1) 27%, rgba(33,38,32,1) 29%, rgba(31,36,30,1) 29%,
+    rgba(31,36,30,1) 34%, rgba(33,38,32,1) 34%, rgba(33,38,32,1) 36%, rgba(31,36,30,1) 36%,
+    rgba(31,36,30,1) 41%, rgba(33,38,32,1) 41%, rgba(33,38,32,1) 43%, rgba(31,36,30,1) 43%,
+    rgba(31,36,30,1) 48%, rgba(33,38,32,1) 48%, rgba(33,38,32,1) 50%, rgba(31,36,30,1) 50%,
+    rgba(31,36,30,1) 55%, rgba(33,38,32,1) 55%, rgba(33,38,32,1) 57%, rgba(31,36,30,1) 57%,
+    rgba(31,36,30,1) 62%, rgba(33,38,32,1) 62%, rgba(33,38,32,1) 64%, rgba(31,36,30,1) 64%,
+    rgba(31,36,30,1) 69%, rgba(33,38,32,1) 69%, rgba(33,38,32,1) 71%, rgba(31,36,30,1) 71%,
+    rgba(31,36,30,1) 76%, rgba(33,38,32,1) 76%, rgba(33,38,32,1) 78%, rgba(31,36,30,1) 78%,
+    rgba(31,36,30,1) 83%, rgba(33,38,32,1) 83%);
+
+    // & section {
+    //     border: solid 2px purple;
+
+    // }
+
+    & .hero {
+
+        & .hero-img {
+            box-shadow: $img-shadow;
+        }
+
+        & .subtitle-group {
+            margin-top: 1em;;
+            max-width: 700px;
+            display: flex;
+            justify-content: space-between;
+
+            & :nth-child(2) {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+
+        & .medium {
+            font-size: 1.75rem;
+        }
+        
+        
+
+
+    }
+}
+
+
+
+//// Footer
+footer {
+    //border: solid red 2px;
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: linear-gradient(86deg, #212620 25%, transparent), url(https://i.postimg.cc/N08VVdSB/IMG-7744-Edit.jpg);
+    background-position: 0px 0px, 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    & .footer__body {
+      //border: solid yellow 2px;
+      margin-left: 1em;
+
+      @media (min-width: 750px) {
+        margin-left: 5em;
+      }
+
+
+      & .text-small {
+        font-size: .75rem;
+      }
+
+
+
+
+
+
+
+    }
+}
