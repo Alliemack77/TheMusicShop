@@ -99,9 +99,69 @@ body {
   font-weight: 100;
 }
 
-.card-title {
+.subtitle-small {
+  font-weight: 100;
+}
+
+.card {
+  background: #333B31;
+  width: 340px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+.card:hover {
+  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.25);
+}
+.card .card-img {
+  width: 100%;
+  height: 100%;
+  position: static;
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+}
+.card .card-img.ani {
+  background-image: url("/ani.ea41cb32.jpg");
+}
+.card .card-img.andre {
+  background-image: url("/andre.cf74cc3c.jpg");
+}
+.card .card-img.mica {
+  background-image: url("/mica.66aef174.jpg");
+}
+.card .card-body {
+  position: absolute;
+  bottom: 25px;
+  right: 0px;
+  padding-right: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.card .card-title {
   font-family: "Sedgwick Ave", cursive;
   font-weight: 100;
+  margin: 0;
+  font-size: 2.55rem;
+}
+.card .subtitle-small {
+  font-size: 1rem;
+  margin-bottom: 1.25em;
+}
+.card .btn-cta {
+  font-size: 1.1rem;
+}
+
+.stack {
+  margin: 2.5em auto;
+  padding: 1em;
+  max-width: 1200px;
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  justify-items: center;
+  gap: 2em;
 }
 
 header {
@@ -137,8 +197,8 @@ header li:nth-child(3) {
 main {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  padding: 2.5em 0 4em 0;
+  gap: 10rem;
+  padding: 3.5em 0 4em 0;
   background: linear-gradient(90deg, #212620 0%, #212620 15%, #1f241e 15%, #1f241e 20%, #212620 20%, #212620 22%, #1f241e 22%, #1f241e 27%, #212620 27%, #212620 29%, #1f241e 29%, #1f241e 34%, #212620 34%, #212620 36%, #1f241e 36%, #1f241e 41%, #212620 41%, #212620 43%, #1f241e 43%, #1f241e 48%, #212620 48%, #212620 50%, #1f241e 50%, #1f241e 55%, #212620 55%, #212620 57%, #1f241e 57%, #1f241e 62%, #212620 62%, #212620 64%, #1f241e 64%, #1f241e 69%, #212620 69%, #212620 71%, #1f241e 71%, #1f241e 76%, #212620 76%, #212620 78%, #1f241e 78%, #1f241e 83%, #212620 83%);
 }
 main .hero .hero-img {
@@ -157,29 +217,118 @@ main .hero .subtitle-group :nth-child(2) {
 main .hero .medium {
   font-size: 1.75rem;
 }
+main .cta {
+  margin-top: 1.5em;
+}
+main .cta .cta-img {
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+}
+main .cta .cta-body {
+  border-left: solid 10px #0000005e;
+  width: 600px;
+  margin: 2em 0 0 0;
+}
+main .cta .cta-body .wrapper {
+  width: 60%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .cta .cta-body .wrapper > h2 {
+  margin: 0;
+}
+main .cta .cta-body .wrapper > p {
+  line-height: 1.4;
+}
+main .cta .cta-body .wrapper > *:not(:first-child) {
+  margin-top: 1.5em;
+}
+main .quote {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+main .quote .quote-img {
+  box-shadow: 0px 50px 50px 0 rgba(0, 0, 0, 0.25);
+}
+main .quote > h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 3.75rem;
+}
+main .quote .quote-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+main .quote .quote-body > h2 {
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+}
+main .quote .quote-body > p {
+  margin: 0.25em 0 1.75em 0;
+}
+main .sessions .sessions-body {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .sessions .btn-cta.uppercase {
+  width: max-content;
+  margin: 4.5em auto;
+  text-align: left;
+}
 
 footer {
   display: flex;
   width: 100%;
   min-height: 500px;
-  margin-top: 50px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-top: 5em;
+  padding-top: 5.5em;
+  padding-bottom: 5.5em;
   background-image: linear-gradient(86deg, #212620 25%, transparent), url(https://i.postimg.cc/N08VVdSB/IMG-7744-Edit.jpg);
   background-position: 0px 0px, 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 footer .footer__body {
-  margin-left: 1em;
+  margin-left: 1.25em;
 }
 @media (min-width: 750px) {
   footer .footer__body {
     margin-left: 5em;
   }
 }
+@media (min-width: 1200px) {
+  footer .footer__body {
+    margin-left: 10em;
+  }
+}
+@media (min-width: 1800px) {
+  footer .footer__body {
+    margin-left: 25em;
+  }
+}
+@media (min-width: 2800px) {
+  footer .footer__body {
+    margin-left: 35em;
+  }
+}
 footer .footer__body .text-small {
   font-size: 0.75rem;
+}
+footer .footer__body .subtitle-accent {
+  margin-top: 2.5em;
+}
+footer .footer__body .footer__nav {
+  margin-top: 3em;
+  display: flex;
+  gap: 2em;
+}
+footer .footer__body .social-links {
+  display: flex;
+  gap: 1.5em;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
