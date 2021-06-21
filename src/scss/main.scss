@@ -173,9 +173,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2.5em;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    
 
     & .logo {
         text-align: center;
@@ -207,7 +205,10 @@ header {
     & li:nth-child(3) {order: 3; align-self: center;}
 
     @media (min-width: 768px) {
-         padding: 1em;
+        padding: 1em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     //     flex-direction: row;
     //     justify-content: space-evenly;
     //     align-items: center;
@@ -245,7 +246,7 @@ main {
 
     }
     @media (min-width: 1900px) {
-        padding: 5em 0 5.5em 0;
+        padding: 6em 0 5.5em 0;
 
     }
 
