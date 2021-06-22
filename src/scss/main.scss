@@ -157,7 +157,7 @@ body {
     max-width: 1200px;
     min-height: 20vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)); //repeat as many times as will fit in the available space
     justify-items: center;
     gap: 2em;
 }
