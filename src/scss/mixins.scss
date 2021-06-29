@@ -11,16 +11,11 @@
     font-weight: $thin;
 }
 
-// uppercase text
 @mixin uppercase {
     text-transform: uppercase;
 }
 
-// cta buttons
 @mixin ctaBtnOrange {
     color: $orange;
 }
 
-
-// card body layout
-//card body style
